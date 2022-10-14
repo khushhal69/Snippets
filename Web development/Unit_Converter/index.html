@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter By Khushhal69</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    
+<!-- Unit Converter Start -->
+<div id="main-content">
+
+    <h1 id="quantity-title"></h1>
+  
+    <div id="unitSelector">
+      <div class="unitCaption">Type</div>
+      <div class="unitArea">
+      <select id="selectQuantity" class="selectOption" onchange="loadQuantity(this.selectedIndex)"></select>
+      </div>
+    </div>
+  
+    <div id="calculator">
+      <div class="unitCaption">From<div class="rightButton" onclick="switchUnits();"></div></div>
+  
+      <div class="unitArea">
+          <div class="unitLeft"><input id="inputFrom" class="inputNumber" type="number" step="any" value="1" onkeyup="ie9minusConvert();" oninput="convert();"></div>
+          <div class="unitRight"><select id="selectFrom" class="selectOption inputOption" onchange="onChangeUnit();"></select></div>
+      </div>
+  
+      <div class="unitCaption">To</div>
+      <div class="unitArea">
+        <div class="unitLeft"><input id="inputTo" class="inputNumber" type="number" step="any" value="" onkeyup="ie9minusConvertBack();" oninput="convertBack();"></div>
+        <div class="unitRight"><select id="selectTo" class="selectOption inputOption" onchange="onChangeUnit();"></select></div>
+        <div id="conversionInfo"></div>
+      </div>
+  
+</body>
+</html>
